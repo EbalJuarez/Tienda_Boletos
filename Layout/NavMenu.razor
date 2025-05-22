@@ -1,0 +1,31 @@
+﻿
+<div class="@NavMenuCssClass nav-scrollable">
+    <nav class="flex-row">
+        <div class="nav-item px-3 py-2">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                 Inicio
+            </NavLink>
+        </div>
+        <div class="nav-item px-3 py-2">
+            <NavLink class="nav-link" href="conciertos">
+                Boletos
+            </NavLink>
+        </div>
+        <div class="nav-item px-3 py-2">
+            <NavLink class="nav-link" href="weather">
+                Calendario de eventos
+            </NavLink>
+        </div>
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

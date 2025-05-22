@@ -1,0 +1,16 @@
+@keyframes tapeo-b-tz262y1fsz {
+    0% {
+        transform: translateX(100%); 
+    }
+
+    100% {
+        transform: translateX(0); 
+    }
+}
+
+.title[b-tz262y1fsz] {
+    margin-block-end:500px;
+    font-size: 2em;
+    color: white; 
+    animation: tapeo-b-tz262y1fsz 1.5s ease-out forwards; 
+}

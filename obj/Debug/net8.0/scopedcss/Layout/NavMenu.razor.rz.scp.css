@@ -1,0 +1,92 @@
+
+
+.inicio[b-rhwga8crhg] {
+    background-color: black;
+    margin-left: 750px; 
+}
+
+.bi[b-rhwga8crhg] {
+    display: inline-block;
+    position: relative;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right:0.75rem;
+    top: -1px;
+    background-size: cover;
+
+}
+
+
+
+.nav-item[b-rhwga8crhg] {
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+    margin-left: 75px; 
+    margin-right: 75px;
+}
+
+    .nav-item:first-of-type[b-rhwga8crhg] {
+        padding-top: 1rem;
+    }
+
+    .nav-item:last-of-type[b-rhwga8crhg] {
+        padding-bottom: 1rem;
+    }
+
+    .nav-item[b-rhwga8crhg]  a {
+        margin-top: 10px;
+        color: #d7d7d7;
+        border-radius: 40px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+    }
+
+nav.flex-row[b-rhwga8crhg] {
+    display: flex; 
+    justify-content: space-evenly; 
+    justify-items: center; 
+    
+}
+
+.nav-item[b-rhwga8crhg]  a.active {
+    background-color: rgba(255,255,255,0.37);
+    color: white;
+}
+
+.nav-item[b-rhwga8crhg]  a:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.nav-link[b-rhwga8crhg] {
+    color: white; 
+    display: flex;
+    justify-items:center;
+}
+    .nav-link:hover[b-rhwga8crhg] {
+        background-color: #495057;
+    }
+
+@media (min-width: 641px) {
+    .navbar-toggler[b-rhwga8crhg] {
+        display: none;
+    }
+
+    .collapse[b-rhwga8crhg] {
+        
+        display: block;
+    }
+
+    .nav-scrollable[b-rhwga8crhg] {
+        display: flex; 
+        justify-content: center;
+        height: 100%; 
+    }
+}
+
+
+
+
+    

@@ -1,0 +1,66 @@
+﻿@page "/mesasplatino"
+@inject Blazored.LocalStorage.ISyncLocalStorageService localStorage
+@using PaginaDeBoletos
+
+<PageTitle>Pagina mesas platino</PageTitle>
+
+<EditForm Model="@boleto" OnValidSubmit="@guardar">
+
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="Contenedor-sesion">
+        <div class="form-container">
+            <p class="title">Compra Mesas Platino</p>
+            <div class="form">
+                <div class="input-group">
+                    <label for="nombre">Nombre:</label>
+                    <InputText placeholder="" id="nombre" @bind-Value="boleto.Nombre" style="width: 100%; border-radius: 0.375rem; border: 1px solid rgba(55, 65, 81, 1); outline: 0; background-color: rgba(17, 24, 39, 1); padding: 0.75rem 1rem; color: rgba(243, 244, 246, 1);" />
+                    <ValidationMessage For="() => boleto.Nombre" />
+                </div>
+                <div class="input-group">
+                    <label for="dpi">DPI:</label>
+                    <InputText placeholder="" id="dpi" @bind-Value="boleto.DPI" style="width: 100%; border-radius: 0.375rem; border: 1px solid rgba(55, 65, 81, 1); outline: 0; background-color: rgba(17, 24, 39, 1); padding: 0.75rem 1rem; color: rgba(243, 244, 246, 1);" />
+                    <ValidationMessage For="() => boleto.DPI" />
+                    <label for="correo">Correo electronico:</label>
+                    <InputText placeholder="" id="correo" @bind-Value="boleto.Correo" style="width: 100%; border-radius: 0.375rem; border: 1px solid rgba(55, 65, 81, 1); outline: 0; background-color: rgba(17, 24, 39, 1); padding: 0.75rem 1rem; color: rgba(243, 244, 246, 1);" />
+                    <ValidationMessage For="() => boleto.Correo" />
+                    <label for="correo">Cantidad boletos:</label>
+                    <InputNumber placeholder="" id="correo" @bind-Value="cantidadboletos" style="width: 100%; border-radius: 0.375rem; border: 1px solid rgba(55, 65, 81, 1); outline: 0; background-color: rgba(17, 24, 39, 1); padding: 0.75rem 1rem; color: rgba(243, 244, 246, 1);" />
+                    <ValidationMessage For="() => cantidadboletos" />
+                </div>
+                <button style="margin-top:6%;" class="sign" type="submit">Submit</button>
+            </div>
+            <div class="social-message">
+                <div class="line"></div>
+                <p class="message">Ingrese los datos solicitados</p>
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+</EditForm>
+
+@code {
+    private int cantidadboletos = 0;
+    private MesasPlatino boleto = new MesasPlatino();
+    private List<MesasPlatino> Lista_Boletos_Mesas_Platino = new List<MesasPlatino>();
+
+    private void guardar()
+    {
+        Lista_Boletos_Mesas_Platino.Add(boleto);
+        localStorage.SetItem("starships", Lista_Boletos_Mesas_Platino);
+
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Recuperar la lista de starships desde LocalStorage a una variable var
+        var savedStarships = localStorage.GetItem<List<MesasPlatino>>("starships");
+
+        // Validar si la lista fue recuperada correctamente, copiarla a la lista
+        if (savedStarships != null)
+        {
+            Lista_Boletos_Mesas_Platino = savedStarships;
+        }
+    }
+}

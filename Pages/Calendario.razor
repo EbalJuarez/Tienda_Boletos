@@ -1,0 +1,78 @@
+﻿@page "/weather"
+@inject HttpClient Http
+@inject Blazored.LocalStorage.ISyncLocalStorageService localStorage
+@using PaginaDeBoletos.Clases
+
+<PageTitle>Conciertos: </PageTitle>
+
+<h1>Eventos y conciertos</h1>
+
+<p>Conciertos proximos y sus fechas.</p>
+
+@if (concert == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="space-table">
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Titulo del concierto</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Ubicacion</th>
+                        <th>Artista</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var bolet in concert)
+                    {
+                        <tr>
+                            <td>@bolet.tituloconcierto</td>
+                            <td>@bolet.fecha</td>
+                            <td>@bolet.hora</td>
+                            <td>@bolet.ubicacion</td>
+                            <td>@bolet.artista_banda</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    
+}
+<div class="bodyimagen">
+    <div class="imagen">
+        <picture>
+            <img src="sample-data/FOTOESTADIO.png" alt="Descripción de la imagen">
+        </picture>
+    </div>
+</div>
+
+
+
+@code {
+    private Concierto[]? concert;
+    public class Concierto
+    {
+        public string? tituloconcierto { get; set; }
+
+        public DateTime fecha { get; set; }
+
+        public string? hora { get; set; }
+
+        public string? ubicacion { get; set; }
+
+        public string? artista_banda { get; set; }
+
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        concert = await Http.GetFromJsonAsync<Concierto[]>("sample-data/Concierto.json");
+    }
+}
