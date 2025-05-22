@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bIJBNxaPYJk=",
+  "dgSpecHash": "yoE10cNqdYQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\cuenta\\source\\repos\\Bolx\\Bolx.csproj",
+  "projectFilePath": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Bolx.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cuenta\\.nuget\\packages\\blazored.localstorage\\4.5.0\\blazored.localstorage.4.5.0.nupkg.sha512",
     "C:\\Users\\cuenta\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.15\\microsoft.aspnetcore.authorization.8.0.15.nupkg.sha512",

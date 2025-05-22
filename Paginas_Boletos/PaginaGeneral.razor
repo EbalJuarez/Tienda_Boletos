@@ -44,12 +44,10 @@
     private int cantidadboletos = 0;
     private General boleto = new General();
     private List<General> Lista_Boletos_General = new List<General>();
-    
+
     private void guardar()
     {
-        Lista_Boletos_General.Add(boleto);
         localStorage.SetItem("starships", Lista_Boletos_General);
-
     }
 
     protected override async Task OnInitializedAsync()

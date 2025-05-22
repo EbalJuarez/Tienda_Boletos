@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bolx")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65706165267ab21aa53e4df35a3191bb3e781f66")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bolx")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bolx")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

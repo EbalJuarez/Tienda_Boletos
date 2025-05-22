@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cuenta\\source\\repos\\Bolx\\Bolx.csproj": {}
+    "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Bolx.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cuenta\\source\\repos\\Bolx\\Bolx.csproj": {
+    "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Bolx.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cuenta\\source\\repos\\Bolx\\Bolx.csproj",
+        "projectUniqueName": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Bolx.csproj",
         "projectName": "Bolx",
-        "projectPath": "C:\\Users\\cuenta\\source\\repos\\Bolx\\Bolx.csproj",
+        "projectPath": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Bolx.csproj",
         "packagesPath": "C:\\Users\\cuenta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cuenta\\source\\repos\\Bolx\\obj\\",
+        "outputPath": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

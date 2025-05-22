@@ -4,6 +4,6 @@ wwwroot\css\bootstrap\bootstrap.min.css.map
 wwwroot\favicon.png
 wwwroot\icon-192.png
 wwwroot\index.html
-wwwroot\sample-data\weather.json
 wwwroot\sample-data\Concierto.json
 wwwroot\sample-data\FOTOESTADIO.png
+wwwroot\sample-data\weather.json
