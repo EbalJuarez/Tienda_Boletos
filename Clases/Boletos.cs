@@ -1,11 +1,10 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace PaginaDeBoletos.Clases
 {
     public class Boletos
     {
-        
+        public static int Total_Boletos = VIP.Total_Boletos+General.Total_Boletos+MesasPlatino.Total_Boletos+Tribuna.Total_Boletos;
         public int? Numero_correlativo { get; set; }
         public string? Zona { get; set; }
         [Required]

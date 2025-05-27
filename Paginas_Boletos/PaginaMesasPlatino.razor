@@ -1,7 +1,7 @@
 ﻿@page "/mesasplatino"
 @inject Blazored.LocalStorage.ISyncLocalStorageService localStorage
 @using PaginaDeBoletos
-
+@using PaginaDeBoletos.Clases
 <PageTitle>Pagina mesas platino</PageTitle>
 
 <EditForm Model="@boleto" OnValidSubmit="@guardar">
@@ -29,7 +29,7 @@
                     <InputNumber placeholder="" id="correo" @bind-Value="cantidadboletos" style="width: 100%; border-radius: 0.375rem; border: 1px solid rgba(55, 65, 81, 1); outline: 0; background-color: rgba(17, 24, 39, 1); padding: 0.75rem 1rem; color: rgba(243, 244, 246, 1);" />
                     <ValidationMessage For="() => cantidadboletos" />
                 </div>
-                <button style="margin-top:6%;" class="sign" type="submit">Submit</button>
+                <button style="margin-top:6%;" class="sign" type="submit">Comprar</button>
             </div>
             <div class="social-message">
                 <div class="line"></div>
@@ -45,10 +45,19 @@
     private MesasPlatino boleto = new MesasPlatino();
     private List<MesasPlatino> Lista_Boletos_Mesas_Platino = new List<MesasPlatino>();
 
+
     private void guardar()
     {
-        Lista_Boletos_Mesas_Platino.Add(boleto);
-        localStorage.SetItem("starships", Lista_Boletos_Mesas_Platino);
+        boleto.Fecha_Compra = DateTime.Now;
+        if (Boletos.Total_Boletos > 0)
+        {
+            MesasPlatino.Total_Boletos = MesasPlatino.Total_Boletos - cantidadboletos;
+            Transaccion.Cola_Transacciones.Enqueue(boleto);
+            Boletos Cola = Transaccion.Cola_Transacciones.Dequeue();
+            Estadio.Asientos_MesasPlatino.Add((MesasPlatino)Cola);
+            localStorage.SetItem("starships", Lista_Boletos_Mesas_Platino);
+
+        }
 
     }
 
