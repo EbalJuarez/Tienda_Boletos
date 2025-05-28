@@ -1,60 +1,95 @@
 ﻿@page "/cancelar"
 @inject Blazored.LocalStorage.ISyncLocalStorageService localStorage
 @using PaginaDeBoletos
-
+@using Bolx.Clases
 <PageTitle>Pagina Cancelar</PageTitle>
+@if (Lista_Boletos_General.Any() || Lista_Boletos_Platino.Any() || Lista_Boletos_Tribuna.Any() || Lista_Boletos_Vip.Any())
+{
+    <EditForm Model="@cancelar" OnValidSubmit="@cancelarx">
 
-<EditForm Model="@boleto" OnValidSubmit="@guardar">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
 
-    <DataAnnotationsValidator />
-    <ValidationSummary />
+        <div class="Contenedor-sesion">
+            <div class="form-container">
+                <p class="title">Cancelar compra</p>
+                <div class="form">
+                    <div class="input-group">
+                        <label for="nombre">Nombre:</label>
+                        <InputText placeholder="" id="nombre" @bind-Value="cancelar.nombre" style="width: 100%; border-radius: 0.375rem; border: 1px solid rgba(55, 65, 81, 1); outline: 0; background-color: rgba(17, 24, 39, 1); padding: 0.75rem 1rem; color: rgba(243, 244, 246, 1);" />
+                        <ValidationMessage For="() => cancelar.nombre" />
+                    </div>
+                    <div class="input-group">
+                        <label for="dpi">DPI:</label>
+                        <InputText placeholder="" id="dpi" @bind-Value="cancelar.dpi" style="width: 100%; border-radius: 0.375rem; border: 1px solid rgba(55, 65, 81, 1); outline: 0; background-color: rgba(17, 24, 39, 1); padding: 0.75rem 1rem; color: rgba(243, 244, 246, 1);" />
+                        <ValidationMessage For="() => cancelar.dpi" />
+                    </div>
 
-    <div class="Contenedor-sesion">
-        <div class="form-container">
-            <p class="title">Cancelar compra</p>
-            <div class="form">
-                <div class="input-group">
-                    <label for="nombre">Nombre:</label>
-                    <InputText placeholder="" id="nombre" @bind-Value="boleto.Nombre" style="width: 100%; border-radius: 0.375rem; border: 1px solid rgba(55, 65, 81, 1); outline: 0; background-color: rgba(17, 24, 39, 1); padding: 0.75rem 1rem; color: rgba(243, 244, 246, 1);" />
-                    <ValidationMessage For="() => boleto.Nombre" />
+                    <button style="margin-top:6%;" class="sign" type="submit">Cancelar</button>
                 </div>
-                <div class="input-group">
-                    <label for="dpi">DPI:</label>
-                    <InputText placeholder="" id="dpi" @bind-Value="boleto.DPI" style="width: 100%; border-radius: 0.375rem; border: 1px solid rgba(55, 65, 81, 1); outline: 0; background-color: rgba(17, 24, 39, 1); padding: 0.75rem 1rem; color: rgba(243, 244, 246, 1);" />
-                    <ValidationMessage For="() => boleto.DPI" />
+                <div class="social-message">
+                    <div class="line"></div>
+                    <p class="message">Ingrese los datos solicitados</p>
+                    <div class="line"></div>
                 </div>
-                <button style="margin-top:6%;" class="sign" type="submit">Cancelar</button>
-            </div>
-            <div class="social-message">
-                <div class="line"></div>
-                <p class="message">Ingrese los datos solicitados</p>
-                <div class="line"></div>
             </div>
         </div>
+    </EditForm>
+}
+else
+{
+    <div style="color: darkorange; font-weight: bold; text-align: center; margin-top: 20px;">
+        ⚠️ No hay compras registradas
     </div>
-</EditForm>
+
+}
 
 @code {
-    private int cantidadboletos = 0;
-    private General boleto = new General();
-    private List<General> Lista_Boletos_General = new List<General>();
 
-    private void guardar()
+    private Cancelar cancelar = new Cancelar();
+    private List<General> Lista_Boletos_General = new List<General>();
+    private List<MesasPlatino> Lista_Boletos_Platino = new List<MesasPlatino>();
+    private List<VIP> Lista_Boletos_Vip = new List<VIP>();
+    private List<Tribuna> Lista_Boletos_Tribuna = new List<Tribuna>();
+
+    private void cancelarx()
     {
-        Estadio.Asientos_General.Add(boleto);
-        localStorage.SetItem("starships", Lista_Boletos_General);
+        Cancelar.Pila_Cancelacion.Push(cancelar);
+
+        var cancelacionActual = Cancelar.Pila_Cancelacion.Peek();
+
+        Lista_Boletos_Platino.RemoveAll(b =>
+            cancelacionActual.nombre == b.Nombre && cancelacionActual.dpi == b.DPI);
+        localStorage.SetItem("Registro_Platino", Lista_Boletos_Platino);
+
+        Lista_Boletos_General.RemoveAll(b =>
+            cancelacionActual.nombre == b.Nombre && cancelacionActual.dpi == b.DPI);
+        localStorage.SetItem("Registro_General", Lista_Boletos_General);
+
+        Lista_Boletos_Tribuna.RemoveAll(b =>
+            cancelacionActual.nombre == b.Nombre && cancelacionActual.dpi == b.DPI);
+        localStorage.SetItem("Registro_Tribuna", Lista_Boletos_Tribuna);
+
+        Lista_Boletos_Vip.RemoveAll(b =>
+            cancelacionActual.nombre == b.Nombre && cancelacionActual.dpi == b.DPI);
+        localStorage.SetItem("Registro_Vip", Lista_Boletos_Vip);
 
     }
 
     protected override async Task OnInitializedAsync()
     {
         // Recuperar la lista de starships desde LocalStorage a una variable var
-        var savedStarships = localStorage.GetItem<List<General>>("starships");
-
+        var savedGeneral = localStorage.GetItem<List<General>>("starships");
+        var savedVip = localStorage.GetItem<List<VIP>>("Registro_Vip");
+        var savedTribuna = localStorage.GetItem<List<Tribuna>>("Registro_Tribuna");
+        var savedPlatino = localStorage.GetItem<List<MesasPlatino>>("Registro_Platino");
         // Validar si la lista fue recuperada correctamente, copiarla a la lista
-        if (savedStarships != null)
+        if (savedGeneral != null && savedVip != null && savedTribuna != null && savedPlatino != null)
         {
-            Lista_Boletos_General = savedStarships;
+            Lista_Boletos_General = savedGeneral;   
+            Lista_Boletos_Platino = savedPlatino;
+            Lista_Boletos_Tribuna = savedTribuna;
+            Lista_Boletos_Vip = savedVip;
         }
     }
 }

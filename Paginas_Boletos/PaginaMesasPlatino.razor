@@ -43,19 +43,22 @@
 @code {
     private int cantidadboletos = 0;
     private MesasPlatino boleto = new MesasPlatino();
-    private List<MesasPlatino> Lista_Boletos_Mesas_Platino = new List<MesasPlatino>();
+    private List<MesasPlatino> Lista_Boletos_Platino = new List<MesasPlatino>();
 
 
     private void guardar()
     {
         boleto.Fecha_Compra = DateTime.Now;
+        boleto.Numero_correlativo = int.Parse(Transaccion.NoCorrelativo(boleto.DPI,1));
+        boleto.Zona = "Mesas Platino";
         if (Boletos.Total_Boletos > 0)
         {
+
             MesasPlatino.Total_Boletos = MesasPlatino.Total_Boletos - cantidadboletos;
             Transaccion.Cola_Transacciones.Enqueue(boleto);
             Boletos Cola = Transaccion.Cola_Transacciones.Dequeue();
-            Estadio.Asientos_MesasPlatino.Add((MesasPlatino)Cola);
-            localStorage.SetItem("starships", Lista_Boletos_Mesas_Platino);
+            Lista_Boletos_Platino.Add((MesasPlatino)Cola);
+            localStorage.SetItem("Registro_Platino", Lista_Boletos_Platino);
 
         }
 
@@ -64,12 +67,12 @@
     protected override async Task OnInitializedAsync()
     {
         // Recuperar la lista de starships desde LocalStorage a una variable var
-        var savedStarships = localStorage.GetItem<List<MesasPlatino>>("starships");
+        var savedPlatino = localStorage.GetItem<List<MesasPlatino>>("Registro_Platino");
 
         // Validar si la lista fue recuperada correctamente, copiarla a la lista
-        if (savedStarships != null)
+        if (savedPlatino != null)
         {
-            Lista_Boletos_Mesas_Platino = savedStarships;
+            Lista_Boletos_Platino = savedPlatino;
         }
     }
 }

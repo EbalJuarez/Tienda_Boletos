@@ -59,25 +59,27 @@
     private void guardar()
     {
         boleto.Fecha_Compra = DateTime.Now;
+        boleto.Numero_correlativo = int.Parse(Transaccion.NoCorrelativo(boleto.DPI, 3));
+        boleto.Zona = "General";
         if (Boletos.Total_Boletos > 0)
         {
             Transaccion.Cola_Transacciones.Enqueue(boleto);
             Boletos Cola = Transaccion.Cola_Transacciones.Dequeue();
             General.Total_Boletos = General.Total_Boletos - cantidadboletos;
-            Estadio.Asientos_General.Add((General)Cola);
-            localStorage.SetItem("starships", Lista_Boletos_General);
+            Lista_Boletos_General.Add((General)Cola);
+            localStorage.SetItem("Registro_General", Lista_Boletos_General);
         }
     }
 
     protected override async Task OnInitializedAsync()
     {
         // Recuperar la lista de starships desde LocalStorage a una variable var
-        var savedStarships = localStorage.GetItem<List<General>>("starships");
+        var savedGeneral = localStorage.GetItem<List<General>>("Registro_General");
 
         // Validar si la lista fue recuperada correctamente, copiarla a la lista
-        if (savedStarships != null)
+        if (savedGeneral != null)
         {
-            Lista_Boletos_General = savedStarships;
+            Lista_Boletos_General = savedGeneral;
         }
     }
 }

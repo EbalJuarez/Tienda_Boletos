@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "yoE10cNqdYQ=",
+  "dgSpecHash": "o2dpg8/Wcv0=",
   "success": true,
   "projectFilePath": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Bolx.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cuenta\\.nuget\\packages\\blazored.localstorage\\4.5.0\\blazored.localstorage.4.5.0.nupkg.sha512",
+    "C:\\Users\\cuenta\\.nuget\\packages\\bouncycastle.cryptography\\2.4.0\\bouncycastle.cryptography.2.4.0.nupkg.sha512",
+    "C:\\Users\\cuenta\\.nuget\\packages\\itextsharp\\5.5.13.4\\itextsharp.5.5.13.4.nupkg.sha512",
+    "C:\\Users\\cuenta\\.nuget\\packages\\itextsharp.xmlworker\\5.5.13.4\\itextsharp.xmlworker.5.5.13.4.nupkg.sha512",
     "C:\\Users\\cuenta\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.15\\microsoft.aspnetcore.authorization.8.0.15.nupkg.sha512",
     "C:\\Users\\cuenta\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.15\\microsoft.aspnetcore.components.8.0.15.nupkg.sha512",
     "C:\\Users\\cuenta\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\8.0.15\\microsoft.aspnetcore.components.analyzers.8.0.15.nupkg.sha512",
@@ -31,8 +34,34 @@
     "C:\\Users\\cuenta\\.nuget\\packages\\microsoft.jsinterop.webassembly\\8.0.15\\microsoft.jsinterop.webassembly.8.0.15.nupkg.sha512",
     "C:\\Users\\cuenta\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.16\\microsoft.net.illink.tasks.8.0.16.nupkg.sha512",
     "C:\\Users\\cuenta\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\9.0.5\\microsoft.net.sdk.webassembly.pack.9.0.5.nupkg.sha512",
+    "C:\\Users\\cuenta\\.nuget\\packages\\qrcoder\\1.6.0\\qrcoder.1.6.0.nupkg.sha512",
     "C:\\Users\\cuenta\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
     "C:\\Users\\cuenta\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.16\\microsoft.netcore.app.runtime.mono.browser-wasm.8.0.16.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "El paquete \"iTextSharp 5.5.13.4\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "projectPath": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Bolx.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Bolx.csproj",
+      "libraryId": "iTextSharp",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "El paquete \"itextsharp.xmlworker 5.5.13.4\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "projectPath": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Bolx.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Bolx.csproj",
+      "libraryId": "itextsharp.xmlworker",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Bolx",
   "resources": {
-    "hash": "sha256-TfNebNYsQjPKUJOnrKpbEsEUecMirSZ+3WURBK2gXQY=",
+    "hash": "sha256-iSQYXFCexI0nTpi6sDRBSH4vSTWX4+07e/LDfKWBbSI=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-RiGT44TFZmHOY+Oqvb8o8r+BJVWex6+dPxFxrOiWvFY="
     },
@@ -19,6 +19,9 @@
     "coreAssembly": {},
     "assembly": {
       "Blazored.LocalStorage.wasm": "sha256-OaMAAd5n7ORfyur5e3QIyEVKJ76MKIvwbg7/icnnYcU=",
+      "BouncyCastle.Cryptography.wasm": "sha256-fNNkhoF1EtOBvzedd32l0piPt54gxoGNl/pAhfr3ze4=",
+      "itextsharp.wasm": "sha256-oXiWuBTjO2GLGQS442o2Dgjza2vE5+c0CRI9wMktous=",
+      "itextsharp.xmlworker.wasm": "sha256-QISww2LMnfoGqGv3VmYHHf+E6VDY0T1slQ5ZvTlkITc=",
       "Microsoft.AspNetCore.Authorization.wasm": "sha256-dzswwxTfVvqZ1kXmOQSnuPXU5/dOuES3IABIuosjXSA=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-PSjQfh0eYVZHAE5+uuUTjgynEWSsCpSUTm+zcm7kFrI=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-+62TV9nf3bjEux5PLux447ANQeEl7xaM2g/fDxawK9U=",
@@ -41,6 +44,7 @@
       "Microsoft.Extensions.Primitives.wasm": "sha256-pVrYOTfjb2ITls3LKIByW1t8jwOAWFhmkIVDewtJ1GE=",
       "Microsoft.JSInterop.wasm": "sha256-IB3YL+9FQbkVfM0qMgXpRPazxhBiiiFCXAYE4iYBKDA=",
       "Microsoft.JSInterop.WebAssembly.wasm": "sha256-5MSzvsQ7ZVzjE56ga0wctuK4TqoZiX6BFlscR5DjETw=",
+      "QRCoder.wasm": "sha256-ayRMl7l1GF4h65kNE0bKJ4lrGPZxmR+OkvPUFrQ11oU=",
       "System.IO.Pipelines.wasm": "sha256-JqVBy6SV+3qk+IK3VJiyIDt9CsVk6b1/ytTXmrI4mTM=",
       "Microsoft.CSharp.wasm": "sha256-y2IqC4H4X61/uK+89NTIN2q613FwevJQajt76CdcxpU=",
       "Microsoft.VisualBasic.Core.wasm": "sha256-ZQo9N/2H/aWngiLhFtYKHju5mLFZ9pWDha8ZDz6zC7w=",
@@ -210,10 +214,10 @@
       "mscorlib.wasm": "sha256-Im6xq+lOse4P/VnAyrA3hwPstV67V5dB0EwQWcjipyE=",
       "netstandard.wasm": "sha256-PK0GLtj6kQVtZPzq0FZlnSdHh7geujg80LqKdJXA4pI=",
       "System.Private.CoreLib.wasm": "sha256-gEwccs7GbRSPGmeWBOKxNroYfyM+mZ7hqbP3ki1iwX0=",
-      "Bolx.wasm": "sha256-fE2EOmZB1r6Od+sn0iiJpozjMyPAmBl1iH76di0FXzI="
+      "Bolx.wasm": "sha256-sHvLhtbLfP8Pw/bV0/hViAhChv4dBKBRjz7rvCpo7/4="
     },
     "pdb": {
-      "Bolx.pdb": "sha256-ivNUwuX3v5k/kDdIi0XVmsfofZQe9AxJEgDLd5rh+2c="
+      "Bolx.pdb": "sha256-1ZSmFUE7/h5rp5qEYxK/aPNqYepGInBntVV6rdL7h2s="
     }
   },
   "cacheBootResources": true,

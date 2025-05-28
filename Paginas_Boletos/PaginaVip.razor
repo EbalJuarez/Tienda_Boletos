@@ -53,14 +53,16 @@
     private void guardar()
     {
         boleto.Fecha_Compra = DateTime.Now;
+        boleto.Numero_correlativo = int.Parse(Transaccion.NoCorrelativo(boleto.DPI, 2));
+        boleto.Zona = "Vip";
         if (Boletos.Total_Boletos > 0)
         {
             VIP.Total_Boletos = VIP.Total_Boletos - cantidadboletos;
             Transaccion.Cola_Transacciones.Enqueue(boleto);
             Boletos Cola = Transaccion.Cola_Transacciones.Dequeue();
-            Estadio.Asientos_Vip.Add((VIP)Cola);
+            Lista_Boletos_Vip.Add((VIP)Cola);
 
-            localStorage.SetItem("starships", Lista_Boletos_Vip);
+            localStorage.SetItem("Registro_Vip", Lista_Boletos_Vip);
         }
         
 
@@ -69,12 +71,12 @@
     protected override async Task OnInitializedAsync()
     {
         // Recuperar la lista de starships desde LocalStorage a una variable var
-        var savedStarships = localStorage.GetItem<List<VIP>>("starships");
+        var savedVip = localStorage.GetItem<List<VIP>>("Registro_Vip");
 
         // Validar si la lista fue recuperada correctamente, copiarla a la lista
-        if (savedStarships != null)
+        if (savedVip != null)
         {
-            Lista_Boletos_Vip = savedStarships;
+            Lista_Boletos_Vip = savedVip;
         }
     }
 }
