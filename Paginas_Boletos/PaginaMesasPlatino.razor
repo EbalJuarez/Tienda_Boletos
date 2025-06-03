@@ -12,6 +12,7 @@
     <div class="Contenedor-sesion">
         <div class="form-container">
             <p class="title">Compra Mesas Platino</p>
+            <p>Cantidad de boletos disponibles: @MesasPlatino.Boletos_Mesas_Platino</p>
             <div class="form">
                 <div class="input-group">
                     <label for="nombre">Nombre:</label>
@@ -51,17 +52,13 @@
         boleto.Fecha_Compra = DateTime.Now;
         boleto.Numero_correlativo = int.Parse(Transaccion.NoCorrelativo(boleto.DPI,1));
         boleto.Zona = "Mesas Platino";
-        if (Boletos.Total_Boletos > 0)
+
+        if(cantidadboletos <= MesasPlatino.Boletos_Mesas_Platino)
         {
-
-            MesasPlatino.Total_Boletos = MesasPlatino.Total_Boletos - cantidadboletos;
-            Transaccion.Cola_Transacciones.Enqueue(boleto);
-            Boletos Cola = Transaccion.Cola_Transacciones.Dequeue();
-            Lista_Boletos_Platino.Add((MesasPlatino)Cola);
-            localStorage.SetItem("Registro_Platino", Lista_Boletos_Platino);
-
+            Transaccion.Cola_MesasPlatino.Enqueue(boleto);
+            ProcesarCola();
         }
-
+        
     }
 
     protected override async Task OnInitializedAsync()
@@ -73,6 +70,19 @@
         if (savedPlatino != null)
         {
             Lista_Boletos_Platino = savedPlatino;
+        }
+    }
+
+    private void ProcesarCola()
+    {
+        while (Transaccion.Cola_MesasPlatino.Count > 0)
+        {
+            var siguiente = Transaccion.Cola_MesasPlatino.Dequeue();
+
+            MesasPlatino.Boletos_Mesas_Platino -= cantidadboletos;
+            Lista_Boletos_Platino.Add(siguiente);
+
+            localStorage.SetItem("Registro_Platino", Lista_Boletos_Platino);
         }
     }
 }

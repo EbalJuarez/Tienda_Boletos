@@ -3,32 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|c:\\users\\cuenta\\documents\\github\\tienda_boletos\\paginas_boletos\\cancelacion.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|solutionrelative:paginas_boletos\\cancelacion.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|c:\\users\\cuenta\\documents\\github\\tienda_boletos\\clases\\cancelar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|solutionrelative:clases\\cancelar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|c:\\users\\cuenta\\documents\\github\\tienda_boletos\\clases\\vip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|solutionrelative:clases\\vip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|c:\\users\\cuenta\\documents\\github\\tienda_boletos\\clases\\transaccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|solutionrelative:clases\\transaccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|c:\\users\\cuenta\\documents\\github\\tienda_boletos\\paginas_boletos\\paginatribuna.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|solutionrelative:paginas_boletos\\paginatribuna.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|c:\\users\\cuenta\\documents\\github\\tienda_boletos\\clases\\boletos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|solutionrelative:clases\\boletos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|c:\\users\\cuenta\\documents\\github\\tienda_boletos\\paginas_boletos\\paginageneral.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|solutionrelative:paginas_boletos\\paginageneral.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|c:\\users\\cuenta\\documents\\github\\tienda_boletos\\paginas_boletos\\paginamesasplatino.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|solutionrelative:paginas_boletos\\paginamesasplatino.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|c:\\users\\cuenta\\documents\\github\\tienda_boletos\\paginas_boletos\\paginavip.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|solutionrelative:paginas_boletos\\paginavip.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|c:\\users\\cuenta\\documents\\github\\tienda_boletos\\paginas_boletos\\paginamesasplatino.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|solutionrelative:paginas_boletos\\paginamesasplatino.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|c:\\users\\cuenta\\documents\\github\\tienda_boletos\\paginas_boletos\\paginageneral.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|solutionrelative:paginas_boletos\\paginageneral.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|c:\\users\\cuenta\\documents\\github\\tienda_boletos\\paginas_boletos\\cancelacion.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|solutionrelative:paginas_boletos\\cancelacion.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|c:\\users\\cuenta\\documents\\github\\tienda_boletos\\clases\\mesasplatino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|solutionrelative:clases\\mesasplatino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|c:\\users\\cuenta\\documents\\github\\tienda_boletos\\clases\\cancelar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|solutionrelative:clases\\cancelar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|c:\\users\\cuenta\\documents\\github\\tienda_boletos\\paginas_boletos\\paginatribuna.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|solutionrelative:paginas_boletos\\paginatribuna.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|c:\\users\\cuenta\\documents\\github\\tienda_boletos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D67C421-5002-4C93-A7DE-E17780447EB9}|Bolx.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -67,84 +83,128 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "VIP.cs",
+              "DocumentMoniker": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Clases\\VIP.cs",
+              "RelativeDocumentMoniker": "Clases\\VIP.cs",
+              "ToolTip": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Clases\\VIP.cs",
+              "RelativeToolTip": "Clases\\VIP.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T02:46:51.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Cancelacion.razor",
               "DocumentMoniker": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Paginas_Boletos\\Cancelacion.razor",
               "RelativeDocumentMoniker": "Paginas_Boletos\\Cancelacion.razor",
               "ToolTip": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Paginas_Boletos\\Cancelacion.razor",
               "RelativeToolTip": "Paginas_Boletos\\Cancelacion.razor",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAUAAAB6AAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAiwFAAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T02:26:21.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T03:16:36.576Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Boletos.cs",
+              "DocumentMoniker": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Clases\\Boletos.cs",
+              "RelativeDocumentMoniker": "Clases\\Boletos.cs",
+              "ToolTip": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Clases\\Boletos.cs",
+              "RelativeToolTip": "Clases\\Boletos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T03:10:57.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MesasPlatino.cs",
+              "DocumentMoniker": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Clases\\MesasPlatino.cs",
+              "RelativeDocumentMoniker": "Clases\\MesasPlatino.cs",
+              "ToolTip": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Clases\\MesasPlatino.cs",
+              "RelativeToolTip": "Clases\\MesasPlatino.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T03:07:13.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T23:14:23.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Transaccion.cs",
               "DocumentMoniker": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Clases\\Transaccion.cs",
               "RelativeDocumentMoniker": "Clases\\Transaccion.cs",
               "ToolTip": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Clases\\Transaccion.cs",
               "RelativeToolTip": "Clases\\Transaccion.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACUAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACAAAABwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-26T23:51:49.725Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "PaginaMesasPlatino.razor",
               "DocumentMoniker": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Paginas_Boletos\\PaginaMesasPlatino.razor",
               "RelativeDocumentMoniker": "Paginas_Boletos\\PaginaMesasPlatino.razor",
               "ToolTip": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Paginas_Boletos\\PaginaMesasPlatino.razor",
               "RelativeToolTip": "Paginas_Boletos\\PaginaMesasPlatino.razor",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAADQAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFQAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-27T03:01:44.426Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T03:01:44.426Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "PaginaVip.razor",
               "DocumentMoniker": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Paginas_Boletos\\PaginaVip.razor",
               "RelativeDocumentMoniker": "Paginas_Boletos\\PaginaVip.razor",
               "ToolTip": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Paginas_Boletos\\PaginaVip.razor",
               "RelativeToolTip": "Paginas_Boletos\\PaginaVip.razor",
-              "ViewState": "AgIAACcAAAAAAAAAAAAwwDgAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAADoAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-27T03:02:02.087Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T03:02:02.087Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "PaginaGeneral.razor",
               "DocumentMoniker": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Paginas_Boletos\\PaginaGeneral.razor",
               "RelativeDocumentMoniker": "Paginas_Boletos\\PaginaGeneral.razor",
               "ToolTip": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Paginas_Boletos\\PaginaGeneral.razor",
               "RelativeToolTip": "Paginas_Boletos\\PaginaGeneral.razor",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAD4AAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAuwFAAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-26T01:08:16.377Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T01:08:16.377Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "PaginaTribuna.razor",
               "DocumentMoniker": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Paginas_Boletos\\PaginaTribuna.razor",
               "RelativeDocumentMoniker": "Paginas_Boletos\\PaginaTribuna.razor",
               "ToolTip": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Paginas_Boletos\\PaginaTribuna.razor",
               "RelativeToolTip": "Paginas_Boletos\\PaginaTribuna.razor",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAADMAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAFAAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-27T03:01:57.886Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T03:01:57.886Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "Cancelar.cs",
               "DocumentMoniker": "C:\\Users\\cuenta\\Documents\\GitHub\\Tienda_Boletos\\Clases\\Cancelar.cs",
               "RelativeDocumentMoniker": "Clases\\Cancelar.cs",
@@ -152,8 +212,7 @@
               "RelativeToolTip": "Clases\\Cancelar.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T03:01:37.128Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T03:01:37.128Z"
             }
           ]
         },

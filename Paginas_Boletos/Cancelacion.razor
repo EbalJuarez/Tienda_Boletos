@@ -79,17 +79,30 @@ else
     protected override async Task OnInitializedAsync()
     {
         // Recuperar la lista de starships desde LocalStorage a una variable var
-        var savedGeneral = localStorage.GetItem<List<General>>("starships");
+        var savedGeneral = localStorage.GetItem<List<General>>("Registro_General");
         var savedVip = localStorage.GetItem<List<VIP>>("Registro_Vip");
         var savedTribuna = localStorage.GetItem<List<Tribuna>>("Registro_Tribuna");
         var savedPlatino = localStorage.GetItem<List<MesasPlatino>>("Registro_Platino");
         // Validar si la lista fue recuperada correctamente, copiarla a la lista
-        if (savedGeneral != null && savedVip != null && savedTribuna != null && savedPlatino != null)
+        if (savedGeneral != null)
         {
             Lista_Boletos_General = savedGeneral;   
+
+
+           
+        }
+        if(savedPlatino != null)
+        {
             Lista_Boletos_Platino = savedPlatino;
+        }
+        if(savedTribuna != null)
+        {
             Lista_Boletos_Tribuna = savedTribuna;
+        }
+        if(savedVip != null)
+        {
             Lista_Boletos_Vip = savedVip;
         }
+
     }
 }

@@ -12,6 +12,7 @@
     <div class="Contenedor-sesion">
         <div class="form-container">
             <p class="title">Compra Tribuna</p>
+            <p>Boletos disponibles: @Tribuna.Boletos_Tribuna</p>
             <div class="form">
                 <div class="input-group">
                     <label for="nombre">Nombre:</label>
@@ -50,13 +51,11 @@
         boleto.Fecha_Compra = DateTime.Now;
         boleto.Numero_correlativo = int.Parse(Transaccion.NoCorrelativo(boleto.DPI, 4));
         boleto.Zona = "Tribuna";
-        if (Boletos.Total_Boletos > 0)
+        if (cantidadboletos <= Tribuna.Boletos_Tribuna)
         {
-            Tribuna.Total_Boletos = Tribuna.Total_Boletos - cantidadboletos;
-            Transaccion.Cola_Transacciones.Enqueue(boleto);
-            Boletos Cola = Transaccion.Cola_Transacciones.Dequeue();
-            Lista_Boletos_Tribuna.Add((Tribuna)Cola);
-            localStorage.SetItem("Registro_Tribuna", Lista_Boletos_Tribuna);
+            Transaccion.Cola_Tribuna.Enqueue(boleto);
+
+            ProcesarCola();
         }
 
     }
@@ -70,6 +69,19 @@
         if (savedTribuna != null)
         {
             Lista_Boletos_Tribuna = savedTribuna;
+        }
+    }
+
+    private void ProcesarCola()
+    {
+        while (Transaccion.Cola_Tribuna.Count > 0)
+        {
+            var siguiente = Transaccion.Cola_Tribuna.Dequeue();
+
+            Tribuna.Boletos_Tribuna -= cantidadboletos;
+            Lista_Boletos_Tribuna.Add(siguiente);
+
+            localStorage.SetItem("Registro_Platino", Lista_Boletos_Tribuna);
         }
     }
 }
