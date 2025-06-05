@@ -3,6 +3,6 @@ namespace PaginaDeBoletos
 {
     public class VIP : Boletos
     {
-        public static int Boletos_Vip = 20;
+        public static int? Boletos_Vip = 20;
     }
 }

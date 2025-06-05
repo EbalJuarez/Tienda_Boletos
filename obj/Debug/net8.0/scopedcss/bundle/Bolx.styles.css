@@ -329,7 +329,7 @@ nav.flex-row[b-rhwga8crhg] {
 .card0[b-91gvgb304q] {
     width: 195px;
     height: 285px;
-    background: #B9F2FF;
+    background: #699ff5;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -613,10 +613,18 @@ nav.flex-row[b-rhwga8crhg] {
 }
 
 .title[b-tz262y1fsz] {
-    margin-block-end:500px;
+    margin-block-end:100px;
     font-size: 2em;
     color: white; 
     animation: tapeo-b-tz262y1fsz 1.5s ease-out forwards; 
+}
+
+.Texto-Promocion p[b-tz262y1fsz] {
+    margin: 100px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+    color: #f0f0f0;
 }
 /* /Paginas_Boletos/Cancelacion.razor.rz.scp.css */
 .Contenedor-sesion[b-w8bx9gaxet] {

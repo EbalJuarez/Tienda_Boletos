@@ -28,8 +28,8 @@
                     <InputText placeholder="" id="correo" @bind-Value="boleto.Correo" style="width: 100%; border-radius: 0.375rem; border: 1px solid rgba(55, 65, 81, 1); outline: 0; background-color: rgba(17, 24, 39, 1); padding: 0.75rem 1rem; color: rgba(243, 244, 246, 1);" />
                     <ValidationMessage For="() => boleto.Correo" />
                     <label for="correo">Cantidad boletos:</label>
-                    <InputNumber placeholder="" id="correo" @bind-Value="cantidadboletos" style="width: 100%; border-radius: 0.375rem; border: 1px solid rgba(55, 65, 81, 1); outline: 0; background-color: rgba(17, 24, 39, 1); padding: 0.75rem 1rem; color: rgba(243, 244, 246, 1);" />
-                    <ValidationMessage For="() => cantidadboletos" />
+                    <InputNumber placeholder="" id="correo" @bind-Value="boleto.cantidad_boletos" style="width: 100%; border-radius: 0.375rem; border: 1px solid rgba(55, 65, 81, 1); outline: 0; background-color: rgba(17, 24, 39, 1); padding: 0.75rem 1rem; color: rgba(243, 244, 246, 1);" />
+                    <ValidationMessage For="() => boleto.cantidad_boletos" />
                 </div>
                 <button style="margin-top:6%;" class="sign" type="submit">Comprar</button>
             </div>
@@ -52,7 +52,7 @@
         boleto.Fecha_Compra = DateTime.Now;
         boleto.Numero_correlativo = int.Parse(Transaccion.NoCorrelativo(boleto.DPI, 3));
         boleto.Zona = "General";
-        if (cantidadboletos <= General.Boletos_General)
+        if (boleto.cantidad_boletos <= General.Boletos_General)
         {
             Transaccion.Cola_General.Enqueue(boleto);
 
@@ -78,10 +78,10 @@
         {
             var siguiente = Transaccion.Cola_General.Dequeue();
 
-            General.Boletos_General -= cantidadboletos;
+            General.Boletos_General -= boleto.cantidad_boletos;
             Lista_Boletos_General.Add(siguiente);
 
-            localStorage.SetItem("Registro_Platino", Lista_Boletos_General);
+            localStorage.SetItem("Registro_General", Lista_Boletos_General);
         }
     }
 }

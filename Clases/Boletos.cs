@@ -4,7 +4,7 @@ namespace PaginaDeBoletos.Clases
 {
     public class Boletos
     {
-        public static int Total_Boletos = VIP.Boletos_Vip+General.Boletos_General+MesasPlatino.Boletos_Mesas_Platino+Tribuna.Boletos_Tribuna;
+        public static int? Total_Boletos = VIP.Boletos_Vip+General.Boletos_General+MesasPlatino.Boletos_Mesas_Platino+Tribuna.Boletos_Tribuna;
         public int? Numero_correlativo { get; set; }
         public string? Zona { get; set; }
         [Required]
@@ -21,9 +21,10 @@ namespace PaginaDeBoletos.Clases
         [Required]
         [StringLength(13, ErrorMessage = "El DPI debe tener exactamente 13 caracteres.")]
         [MinLength(13, ErrorMessage = "El DPI debe tener exactamente 13 caracteres.")]
+        [RegularExpression(@"^\d{13}$", ErrorMessage = "El DPI debe contener solo números.")]
         public string? DPI { get; set; }
 
-
+        public int? cantidad_boletos { get; set; }
         public DateTime? Fecha_Compra { get; set; }
     }
 }

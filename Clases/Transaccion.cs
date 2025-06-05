@@ -1,13 +1,19 @@
-﻿using System.Collections;
-using System;
-using PaginaDeBoletos.Clases;
+﻿using System;
+using System.Collections;
+using System.IO;
+using System.Net.Mail;
+using System.Net.Mime; 
 using System.Numerics;
-using QRCoder;
-using iTextSharp.text.pdf.qrcode;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using iTextSharp.text.pdf.qrcode;
 using iTextSharp.tool.xml;
-using System.IO;
+using PaginaDeBoletos.Clases;
+using QRCoder;
+using Microsoft.AspNetCore.Mvc;
+using System.Drawing;
+using System.Drawing.Imaging;
+
 namespace PaginaDeBoletos
 
 {
@@ -26,6 +32,7 @@ namespace PaginaDeBoletos
             using var qrCode = new QRCoder.PngByteQRCode(qrData);
             byte[] qrBytes = qrCode.GetGraphic(20);
             return Convert.ToBase64String(qrBytes);
+
         }
 
         public static string NoCorrelativo(string dpi, int tipo)
@@ -34,10 +41,9 @@ namespace PaginaDeBoletos
             return nocorrelativo;
         }
 
-        public static void GenerarPDF()
-        {
-            
-           
-        }
+       
+        
+
+
     }
 }
