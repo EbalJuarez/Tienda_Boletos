@@ -13,6 +13,7 @@
         <div class="form-container">
             <p class="title">Compra Mesas Platino</p>
             <p>Cantidad de boletos disponibles: @MesasPlatino.Boletos_Mesas_Platino</p>
+            <p>Ingrese los datos solicitados</p>
             <div class="form">
                 <div class="input-group">
                     <label for="nombre">Nombre:</label>
@@ -34,18 +35,24 @@
             </div>
             <div class="social-message">
                 <div class="line"></div>
-                <p class="message">Ingrese los datos solicitados</p>
+                <p class="message">Se generará un código QR con su número correlativo. Presione 'Descargar' una vez que esté disponible.</p>
                 <div class="line"></div>
             </div>
         </div>
     </div>
 </EditForm>
 
+<div class="imagenQR">
+    <img src="@imagen" />
+    
+</div>
+<a href="@imagen" download="@($"{boleto.Nombre}.png")" class="fancy-button">
+    Descargar
+</a>
 @code {
-    private int cantidadboletos = 0;
     private MesasPlatino boleto = new MesasPlatino();
     private List<MesasPlatino> Lista_Boletos_Platino = new List<MesasPlatino>();
-
+    string? imagen;
 
     private void guardar()
     {
@@ -58,7 +65,7 @@
             Transaccion.Cola_MesasPlatino.Enqueue(boleto);
             ProcesarCola();
         }
-        
+
     }
 
     protected override async Task OnInitializedAsync()
@@ -70,7 +77,14 @@
         if (savedPlatino != null)
         {
             Lista_Boletos_Platino = savedPlatino;
+
         }
+
+        foreach (var can in Lista_Boletos_Platino)
+        {
+            MesasPlatino.Boletos_Mesas_Platino = 10 - can.cantidad_boletos;
+        }
+
     }
 
     private void ProcesarCola()
@@ -78,7 +92,7 @@
         while (Transaccion.Cola_MesasPlatino.Count > 0)
         {
             var siguiente = Transaccion.Cola_MesasPlatino.Dequeue();
-
+            imagen = Transaccion.Generar_QR(siguiente.Numero_correlativo.ToString());
             MesasPlatino.Boletos_Mesas_Platino -= boleto.cantidad_boletos;
             Lista_Boletos_Platino.Add(siguiente);
 

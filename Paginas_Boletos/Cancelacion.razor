@@ -74,7 +74,7 @@ else
             {
                 General.Boletos_General += bol.cantidad_boletos;
                 Lista_Boletos_General.Remove(bol);
-                localStorage.SetItem("Registro_Platino", Lista_Boletos_General);
+                localStorage.SetItem("Registro_General", Lista_Boletos_General);
             }
         }
 
@@ -84,7 +84,7 @@ else
             {
                 Tribuna.Boletos_Tribuna += bol.cantidad_boletos;
                 Lista_Boletos_Tribuna.Remove(bol);
-                localStorage.SetItem("Registro_Platino", Lista_Boletos_Tribuna);
+                localStorage.SetItem("Registro_Tribuna", Lista_Boletos_Tribuna);
             }
         }
 
@@ -94,7 +94,7 @@ else
             {
                 VIP.Boletos_Vip += bol.cantidad_boletos;
                 Lista_Boletos_Vip.Remove(bol);
-                localStorage.SetItem("Registro_Platino", Lista_Boletos_Vip);
+                localStorage.SetItem("Registro_Vip", Lista_Boletos_Vip);
             }
         }
 
@@ -111,9 +111,7 @@ else
         if (savedGeneral != null)
         {
             Lista_Boletos_General = savedGeneral;   
-
-
-           
+            
         }
         if(savedPlatino != null)
         {

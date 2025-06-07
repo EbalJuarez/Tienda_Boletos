@@ -2,6 +2,8 @@
 @inject Blazored.LocalStorage.ISyncLocalStorageService localStorage
 @using PaginaDeBoletos
 @using PaginaDeBoletos.Clases
+@inject IJSRuntime JS
+@inject NavigationManager NavigationManager
 
 <PageTitle>Pagina general</PageTitle>
 
@@ -14,6 +16,7 @@
         <div class="form-container">
             <p class="title">Compra General</p>
             <p>Boletos disponibles: @General.Boletos_General</p>
+            <p>Ingrese los datos solicitados</p>
             <div class="form">
                 <div class="input-group">
                     <label for="nombre">Nombre:</label>
@@ -35,28 +38,39 @@
             </div>
             <div class="social-message">
                 <div class="line"></div>
-                <p class="message">Ingrese los datos solicitados</p>
+                <p class="message">Se generará un código QR con su número correlativo. Presione 'Descargar' una vez que esté disponible.</p>
                 <div class="line"></div>
             </div>
         </div>
     </div>
 </EditForm>
 
+<div class="imagenQR">
+    <img src="@imagen" />
+   
+</div>
+<a href="@imagen" download="@($"{boleto.Nombre}.png")" class="fancy-button">
+    Descargar
+</a>
+
 @code {
-    private int cantidadboletos;
+
     private General boleto = new General();
     private List<General> Lista_Boletos_General = new List<General>();
+    string? imagen;
 
-    private void guardar()
+    private async Task  guardar()
     {
         boleto.Fecha_Compra = DateTime.Now;
-        boleto.Numero_correlativo = int.Parse(Transaccion.NoCorrelativo(boleto.DPI, 3));
+        boleto.Numero_correlativo = int.Parse(Transaccion.NoCorrelativo(boleto.DPI.ToString(), 3));
         boleto.Zona = "General";
         if (boleto.cantidad_boletos <= General.Boletos_General)
         {
             Transaccion.Cola_General.Enqueue(boleto);
 
             ProcesarCola();
+
+
         }
     }
 
@@ -69,6 +83,11 @@
         if (savedGeneral != null)
         {
             Lista_Boletos_General = savedGeneral;
+
+        }
+        foreach (var can in Lista_Boletos_General)
+        {
+            General.Boletos_General = 100 - can.cantidad_boletos;
         }
     }
 
@@ -77,7 +96,7 @@
         while (Transaccion.Cola_General.Count > 0)
         {
             var siguiente = Transaccion.Cola_General.Dequeue();
-
+            imagen = Transaccion.Generar_QR(siguiente.Numero_correlativo.ToString());
             General.Boletos_General -= boleto.cantidad_boletos;
             Lista_Boletos_General.Add(siguiente);
 

@@ -14,6 +14,7 @@
         <div class="form-container">
             <p class="title">Comprar VIP</p>
             <p>Boletos disponibles: @VIP.Boletos_Vip</p>
+            <p>Ingrese los datos solicitados</p>
             <div class="form">
                 <div class="input-group">
                     <label for="nombre">Nombre:</label>
@@ -35,18 +36,27 @@
             </div>
             <div class="social-message">
                 <div class="line"></div>
-                <p class="message">Ingrese los datos solicitados</p>
+                <p class="message">Se generará un código QR con su número correlativo. Presione 'Descargar' una vez que esté disponible.</p>
+                
                 <div class="line"></div>
             </div>
         </div>
     </div>
+    
 </EditForm>
 
+<div class="imagenQR" >
+    <img src="@imagen" />
+    
+</div>
+<a href="@imagen" download="@($"{boleto.Nombre}.png")" class="fancy-button">
+    Descargar
+</a>
 @code {
-    private int cantidadboletos = 0;
+
     private VIP boleto = new VIP();
     private List<VIP> Lista_Boletos_Vip = new List<VIP>();
-
+    string? imagen;
 
     private void guardar()
     {
@@ -55,13 +65,13 @@
         boleto.Zona = "Vip";
         if (boleto.cantidad_boletos <= VIP.Boletos_Vip)
         {
-           
+
 
             Transaccion.Cola_Vip.Enqueue(boleto);
 
             ProcesarCola();
         }
-        
+
 
     }
 
@@ -74,6 +84,11 @@
         if (savedVip != null)
         {
             Lista_Boletos_Vip = savedVip;
+            
+        }
+        foreach (var can in Lista_Boletos_Vip)
+        {
+            VIP.Boletos_Vip = 20 - can.cantidad_boletos;
         }
     }
 
@@ -82,7 +97,7 @@
         while (Transaccion.Cola_Vip.Count > 0)
         {
             var siguiente = Transaccion.Cola_Vip.Dequeue();
-
+            imagen = Transaccion.Generar_QR(siguiente.Numero_correlativo.ToString());
             VIP.Boletos_Vip -= boleto.cantidad_boletos;
             Lista_Boletos_Vip.Add(siguiente);
 
