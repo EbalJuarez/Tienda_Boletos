@@ -1073,6 +1073,6 @@ C:\Users\cuenta\Documents\GitHub\Tienda_Boletos\obj\Debug\net8.0\compressed\adzk
 C:\Users\cuenta\Documents\GitHub\Tienda_Boletos\obj\Debug\net8.0\compressed\66gn72odmr-rpbpfnzd65.gz
 C:\Users\cuenta\Documents\GitHub\Tienda_Boletos\obj\Debug\net8.0\compressed\jl4q69uq5w-vw6dpka42w.gz
 C:\Users\cuenta\Documents\GitHub\Tienda_Boletos\obj\Debug\net8.0\compressed\p2kg7x0hma-vhfw8f9f40.gz
-C:\Users\cuenta\Documents\GitHub\Tienda_Boletos\obj\Debug\net8.0\compressed\xb437lnj18-a6a0u8t3fw.gz
-C:\Users\cuenta\Documents\GitHub\Tienda_Boletos\obj\Debug\net8.0\compressed\8fppq86lyt-34p9kdxn9c.gz
-C:\Users\cuenta\Documents\GitHub\Tienda_Boletos\obj\Debug\net8.0\compressed\xmz7r0gyv5-ldulgae7z3.gz
+C:\Users\cuenta\Documents\GitHub\Tienda_Boletos\obj\Debug\net8.0\compressed\xb437lnj18-tmw6hmuyax.gz
+C:\Users\cuenta\Documents\GitHub\Tienda_Boletos\obj\Debug\net8.0\compressed\8fppq86lyt-ulloj17evr.gz
+C:\Users\cuenta\Documents\GitHub\Tienda_Boletos\obj\Debug\net8.0\compressed\xmz7r0gyv5-yf0ht9vpzg.gz

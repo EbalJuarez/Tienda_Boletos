@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Bolx",
   "resources": {
-    "hash": "sha256-laG3pVb+tNELil90HNFptgLQLWG0maXC8+aDd42nkXw=",
+    "hash": "sha256-vtvtFh5ThGq30i5Zj9er0Ds4FSLwEiDD+fk+445xfAs=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-RiGT44TFZmHOY+Oqvb8o8r+BJVWex6+dPxFxrOiWvFY="
     },
@@ -216,10 +216,10 @@
       "mscorlib.wasm": "sha256-Im6xq+lOse4P/VnAyrA3hwPstV67V5dB0EwQWcjipyE=",
       "netstandard.wasm": "sha256-PK0GLtj6kQVtZPzq0FZlnSdHh7geujg80LqKdJXA4pI=",
       "System.Private.CoreLib.wasm": "sha256-gEwccs7GbRSPGmeWBOKxNroYfyM+mZ7hqbP3ki1iwX0=",
-      "Bolx.wasm": "sha256-gsHE00FhkJcUn3rcwKRAt/eUnzO+wgd/78mpzWmrVRg="
+      "Bolx.wasm": "sha256-tRMZLRYN9ClsxrhTY1wArEf4aFQj8ryQyBx2gPa+D28="
     },
     "pdb": {
-      "Bolx.pdb": "sha256-Y5/DO6CWFnRgjSwqW3bwuwxsVnf1c2HTNDzH5cLG5+4="
+      "Bolx.pdb": "sha256-nvVwI3zxx9GRHPY47mBiRjvIFw2XLgLx5To7mYDj+5c="
     }
   },
   "cacheBootResources": true,

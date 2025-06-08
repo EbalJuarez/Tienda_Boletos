@@ -31,7 +31,12 @@
                     <InputText placeholder="" id="correo" @bind-Value="boleto.Correo" style="width: 100%; border-radius: 0.375rem; border: 1px solid rgba(55, 65, 81, 1); outline: 0; background-color: rgba(17, 24, 39, 1); padding: 0.75rem 1rem; color: rgba(243, 244, 246, 1);" />
                     <ValidationMessage For="() => boleto.Correo" />
                     <label for="correo">Cantidad boletos:</label>
-                    <InputNumber placeholder="" id="correo" @bind-Value="boleto.cantidad_boletos" style="width: 100%; border-radius: 0.375rem; border: 1px solid rgba(55, 65, 81, 1); outline: 0; background-color: rgba(17, 24, 39, 1); padding: 0.75rem 1rem; color: rgba(243, 244, 246, 1);" />
+                    <InputNumber placeholder=""
+                                 id="correo"
+                                 @bind-Value="boleto.cantidad_boletos"
+                                 Min="1"
+                                 Max="@General.Boletos_General"
+                                 style="width: 100%; border-radius: 0.375rem; border: 1px solid rgba(55, 65, 81, 1); outline: 0; background-color: rgba(17, 24, 39, 1); padding: 0.75rem 1rem; color: rgba(243, 244, 246, 1);" />
                     <ValidationMessage For="() => boleto.cantidad_boletos" />
                 </div>
                 <button style="margin-top:6%;" class="sign" type="submit">Comprar</button>

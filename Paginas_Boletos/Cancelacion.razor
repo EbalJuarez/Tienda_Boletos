@@ -20,9 +20,9 @@
                         <ValidationMessage For="() => cancelar.nombre" />
                     </div>
                     <div class="input-group">
-                        <label for="dpi">DPI:</label>
-                        <InputText placeholder="" id="dpi" @bind-Value="cancelar.dpi" style="width: 100%; border-radius: 0.375rem; border: 1px solid rgba(55, 65, 81, 1); outline: 0; background-color: rgba(17, 24, 39, 1); padding: 0.75rem 1rem; color: rgba(243, 244, 246, 1);" />
-                        <ValidationMessage For="() => cancelar.dpi" />
+                        <label for="dpi">Ingrese el numero correlativo proporcionado del QR:</label>
+                        <InputText placeholder="" id="dpi" @bind-Value="cancelar.no_correlativo" style="width: 100%; border-radius: 0.375rem; border: 1px solid rgba(55, 65, 81, 1); outline: 0; background-color: rgba(17, 24, 39, 1); padding: 0.75rem 1rem; color: rgba(243, 244, 246, 1);" />
+                        <ValidationMessage For="() => cancelar.no_correlativo" />
                     </div>
 
                     <button style="margin-top:6%;" class="sign" type="submit">Cancelar</button>
@@ -60,7 +60,7 @@ else
 
         foreach (var bol in Lista_Boletos_Platino.ToList()) 
         {
-            if (cancelacionActual.nombre == bol.Nombre && cancelacionActual.dpi == bol.DPI)
+            if (cancelacionActual.nombre == bol.Nombre && cancelacionActual.no_correlativo == bol.Numero_correlativo.ToString())
             {
                 MesasPlatino.Boletos_Mesas_Platino += bol.cantidad_boletos;  
                 Lista_Boletos_Platino.Remove(bol);
@@ -70,7 +70,7 @@ else
 
         foreach (var bol in Lista_Boletos_General.ToList())
         {
-            if (cancelacionActual.nombre == bol.Nombre && cancelacionActual.dpi == bol.DPI)
+            if (cancelacionActual.nombre == bol.Nombre && cancelacionActual.no_correlativo == bol.Numero_correlativo.ToString())
             {
                 General.Boletos_General += bol.cantidad_boletos;
                 Lista_Boletos_General.Remove(bol);
@@ -80,7 +80,7 @@ else
 
         foreach (var bol in Lista_Boletos_Tribuna.ToList())
         {
-            if (cancelacionActual.nombre == bol.Nombre && cancelacionActual.dpi == bol.DPI)
+            if (cancelacionActual.nombre == bol.Nombre && cancelacionActual.no_correlativo == bol.Numero_correlativo.ToString())
             {
                 Tribuna.Boletos_Tribuna += bol.cantidad_boletos;
                 Lista_Boletos_Tribuna.Remove(bol);
@@ -90,7 +90,7 @@ else
 
         foreach (var bol in Lista_Boletos_Vip.ToList())
         {
-            if (cancelacionActual.nombre == bol.Nombre && cancelacionActual.dpi == bol.DPI)
+            if (cancelacionActual.nombre == bol.Nombre && cancelacionActual.no_correlativo == bol.Numero_correlativo.ToString())
             {
                 VIP.Boletos_Vip += bol.cantidad_boletos;
                 Lista_Boletos_Vip.Remove(bol);
